@@ -1,0 +1,14 @@
+{
+  "name": "diu-academic-portal",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm --prefix backend install && npm --prefix frontend install",
+    "dev": "concurrently -n BACKEND,FRONTEND -c green,cyan \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
+    "start": "concurrently -n BACKEND,FRONTEND -c green,cyan \"npm --prefix backend run start\" \"npm --prefix frontend run start\"",
+    "build": "npm --prefix backend run build && npm --prefix frontend run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
